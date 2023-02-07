@@ -1,3 +1,3 @@
 # simple_timer JS
 
-[DEMO]()
+[DEMO](https://sergey-shar.github.io/simple_timer/)
