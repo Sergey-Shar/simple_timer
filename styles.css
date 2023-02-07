@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: rgb(10, 25, 33);
+}
+
+button {
+    display: inline-block;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	border-radius: 4px;
+	padding: 5px 15px;
+    box-shadow: 0 5px 30px 0 rgba(250, 244, 244, 0.1);
+}
+button:disabled {
+	color: rgb(152, 151, 151);
+	letter-spacing: 1px;
+    opacity: 0.5;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 55px 0 40px 0;
+	height: 500px;
+	width: 300px;
+	border-radius: 20px;
+	border: 4px solid #091921;
+	box-shadow: 0 -5px 5px rgba(255, 255, 255, 0.05),
+		inset 0 -2px 0px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3),
+		inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.timer-title {
+	color: rgb(152, 151, 151);
+	letter-spacing: 2px;
+	font-size: 30px;
+}
+
+.progress-timer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 3px solid rgb(152, 151, 151);
+	border-radius: 50%;
+    box-shadow: 0 5px 30px 0 rgba(217, 211, 211, 0.1);
+	width: 200px;
+	height: 200px;
+}
+
+.seconds {
+	color: #fff;
+	font-size: 60px;
+}
+.seconds-text {
+	color: rgb(152, 151, 151);
+	letter-spacing: 1px;
+}
+
+.tool-bar {
+	display: flex;
+	gap: 10px;
+}
