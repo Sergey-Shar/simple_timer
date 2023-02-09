@@ -1,10 +1,10 @@
 const buttons = document.querySelectorAll('button');
 const [pauseBtn, resetBtn, startBtn] = buttons;
 const secondsUi = document.querySelector('.seconds');
-const progress = document.querySelector('.progress-timer');
 
 let seconds = 0;
 let timerId = null;
+const DELAY = 1000;
 
 const disableButton = (...elem) =>
 	elem.forEach((item) => item.setAttribute('disabled', 'disabled'));
@@ -13,9 +13,9 @@ const enableButton = (...elem) =>
 	elem.forEach((item) => item.removeAttribute('disabled', 'disabled'));
 
 const startTimer = () => {
-	timerId = setInterval(() => (secondsUi.textContent = ++seconds), 1000);
+	timerId = setInterval(() => (secondsUi.textContent = ++seconds), DELAY);
 	disableButton(startBtn);
-    enableButton(pauseBtn, resetBtn);
+	enableButton(pauseBtn, resetBtn);
 };
 
 const stopTimer = () => {
@@ -30,7 +30,6 @@ const resetTimer = () => {
 	disableButton(pauseBtn, resetBtn);
 	enableButton(startBtn);
 };
-
 
 pauseBtn.onclick = stopTimer;
 resetBtn.onclick = resetTimer;
